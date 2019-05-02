@@ -33,6 +33,18 @@ X = preprocessing.scale(X)  #scale data before classifier, scale new values alon
 #df.dropna(inplace=True)
 y = np.array(df['label'])
 
-print(len(x), len(y))
+#print(len(X), len(y))
 
-X_train,X_test,x_train,x_test = cross_validation.train_test_split(X, y, test_size=0.2)
+
+X_train,X_test,y_train,y_test = model_selection.train_test_split(X, y, test_size=0.2) # take features, labels, shuffles points and outputs
+clf =  LinearRegression()
+
+clf.fit(X_train,y_train) # fit = train
+
+accuracy = clf.score(X_test, y_test) # score = test
+
+ #trains and test seperate data because if training classifier to predict data you're testing against the results will be the same
+
+print(accuracy) # what the accuracy would be predicting the price shift by the end of the day
+# accuracy is squared error
+
