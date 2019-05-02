@@ -1,0 +1,5 @@
+ML created around the 1950's.
+Defined by Arthur Samuel as allowing machines to learn by themselves.
+In 1963, Vladimir Vapnik created a vector machine.
+Extracted from the Soviet Uniun to Bell Labs, he showed his machine was better at writting recognition than the existing neural nets.
+Was leading until Google backed deep learning.
